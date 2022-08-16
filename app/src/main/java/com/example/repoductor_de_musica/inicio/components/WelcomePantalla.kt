@@ -23,6 +23,7 @@ fun WelcomePantalla() {
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
 
+
         }
     }
 }
