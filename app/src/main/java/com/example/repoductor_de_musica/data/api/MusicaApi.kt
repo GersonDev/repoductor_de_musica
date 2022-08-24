@@ -4,7 +4,7 @@ import retrofit2.http.*
 
 interface MusicaApi {
     @GET("musicas")
-    suspend fun getBrands(): List<GetMusicaResponse>
+    suspend fun getMusicas(): List<GetMusicaResponse>
 
     @POST("musicas")
     suspend fun createBrand(

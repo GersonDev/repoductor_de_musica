@@ -1,6 +1,8 @@
-package com.example.repoductor_de_musica.data.api
+package com.example.repoductor_de_musica.domain.models
 
-data class GetMusicaResponse(
+import androidx.annotation.DrawableRes
+
+data class Musica(
     var id: String,
     var title: String,
     var subtitulo: String,
