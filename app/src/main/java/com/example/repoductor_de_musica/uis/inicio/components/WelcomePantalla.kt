@@ -17,6 +17,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.example.repoductor_de_musica.R
+import com.example.repoductor_de_musica.ui.theme.Poppins
 
 @Composable
 fun WelcomePantalla(onClickIngresar:()->Unit) {
@@ -38,7 +39,7 @@ fun WelcomePantalla(onClickIngresar:()->Unit) {
                     .width(
                         174.dp
                     )
-                    .padding(bottom = 15.dp),
+                    .padding(bottom = 10.dp),
                 painter = painterResource(id = R.drawable.logopantalla),
                 contentDescription = "nube"
             )
@@ -73,13 +74,15 @@ fun WelcomePantalla(onClickIngresar:()->Unit) {
             Text(
                 text = "Cloud",
                 color = Color.White,
-                style = MaterialTheme.typography.h1,
+                fontFamily = Poppins,
+                style = MaterialTheme.typography.caption,
                 textAlign = TextAlign.Center
             )
             Text(
                 text = "Music",
-                color = Color.White,
-                style = MaterialTheme.typography.h5,
+                color = Color.LightGray,
+                fontFamily = Poppins,
+                style = MaterialTheme.typography.body1,
                 textAlign = TextAlign.Center
             )
             Button(
@@ -92,7 +95,8 @@ fun WelcomePantalla(onClickIngresar:()->Unit) {
                 content = {
                     Text(
                         text = "Ingresar",
-                        style = MaterialTheme.typography.button
+                        fontFamily = Poppins,
+                        style = MaterialTheme.typography.h4
                     )
                 }
             )

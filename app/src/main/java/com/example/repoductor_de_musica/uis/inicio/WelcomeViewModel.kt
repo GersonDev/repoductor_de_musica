@@ -23,4 +23,12 @@ class WelcomeViewModel(application: Application) : AndroidViewModel(application)
             _musicas.value= musicas
         }
     }
+
+    private val _musicaSeleccionada = MutableLiveData<Musica>()
+    val musicaSeleccionada: LiveData<Musica> = _musicaSeleccionada
+
+
+    fun enviarMusicasSeleccionas(musica: Musica) {
+        _musicaSeleccionada.value = musica
+    }
 }

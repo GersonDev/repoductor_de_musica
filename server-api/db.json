@@ -7,6 +7,70 @@
       "image_url": "https://blog.edufors.com/wp-content/uploads/2018/07/deporte-400x400.jpg",
       "love": true,
       "musica_url": "http://codeskulptor-demos.commondatastorage.googleapis.com/GalaxyInvaders/theme_01.mp3"
+    },
+    {
+      "title": "Paz",
+      "subtitulo": "Mago de Oz",
+      "image_url": "https://i.pinimg.com/474x/3d/d6/ac/3dd6ac182be1d94edac6c39fc75e3d1b.jpg",
+      "love": false,
+      "musica_url": "http://codeskulptor-demos.commondatastorage.googleapis.com/GalaxyInvaders/theme_01.mp3",
+      "id": "9jQGE_h"
+    },
+    {
+      "title": "Tierra",
+      "subtitulo": "Rata Blanca",
+      "image_url": "https://buenosamigosradio.es/wp-content/uploads/2022/01/Lerica-Juan-Magan-y-Nacho-Canciones-Cortavenas-400x400-1.jpg",
+      "love": false,
+      "musica_url": "http://codeskulptor-demos.commondatastorage.googleapis.com/GalaxyInvaders/theme_01.mp3",
+      "id": "fJQIU0V"
+    },
+    {
+      "title": "Sol",
+      "subtitulo": "Rene",
+      "image_url": "https://cdn.smehost.net/sonymusices-45pressprod/wp-content/uploads/2022/05/Tinta-y-tiempo_Musica-y-palabras-400x400.jpg",
+      "love": false,
+      "musica_url": "http://codeskulptor-demos.commondatastorage.googleapis.com/GalaxyInvaders/theme_01.mp3",
+      "id": "_F-2DHZ"
+    },
+    {
+      "title": "Luna",
+      "subtitulo": "Jaze",
+      "image_url": "https://i.pinimg.com/474x/c0/b5/f6/c0b5f663baacedc7f255c6ccbf96fe2a.jpg",
+      "love": false,
+      "musica_url": "http://codeskulptor-demos.commondatastorage.googleapis.com/GalaxyInvaders/theme_01.mp3",
+      "id": "-HWKoa_"
+    },
+    {
+      "title": "Poema",
+      "subtitulo": "Teorema",
+      "image_url": "https://i.pinimg.com/474x/c0/b5/f6/c0b5f663baacedc7f255c6ccbf96fe2a.jpg",
+      "love": false,
+      "musica_url": "http://codeskulptor-demos.commondatastorage.googleapis.com/GalaxyInvaders/theme_01.mp3",
+      "id": "rRsck8q"
+    },
+    {
+      "title": "Papel",
+      "subtitulo": "Edward",
+      "image_url": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/f3/a5/d8/f3a5d85b-a9fc-cd40-396c-228a9f240b49/194171981685.jpg/400x400cc.webp",
+      "love": false,
+      "musica_url": "http://codeskulptor-demos.commondatastorage.googleapis.com/GalaxyInvaders/theme_01.mp3",
+      "id": "mMdSDN_"
+    },
+    {
+      "title": "Lapiz",
+      "subtitulo": "Ariel",
+      "image_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple114/v4/46/7d/95/467d95fd-acb9-d6f3-6d36-1e694acdee45/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/400x400.png",
+      "love": true,
+      "musica_url": "http://codeskulptor-demos.commondatastorage.googleapis.com/GalaxyInvaders/theme_01.mp3",
+      "id": "So7eQ9s"
+    },
+    {
+      "title": "Mi gran amor",
+      "subtitulo": "Rapper School",
+      "image_url": "https://i.pinimg.com/736x/05/08/17/050817b7101a54927bed4eb037862aca--celebrities-tattoos-male-celebrities.jpg",
+      "love": true,
+      "musica_url": "http://codeskulptor-demos.commondatastorage.googleapis.com/GalaxyInvaders/theme_01.mp3",
+      "id": "GdDSY-n"
     }
   ]
 }

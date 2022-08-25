@@ -2,23 +2,26 @@ package com.example.repoductor_de_musica.uis.inicio.components
 
 import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
-import coil.compose.AsyncImage
+import coil.compose.rememberImagePainter
 import com.example.repoductor_de_musica.R
 import com.example.repoductor_de_musica.domain.models.Musica
+import com.example.repoductor_de_musica.ui.theme.Poppins
+
 
 @Composable
-fun MusicasPantalla(musicas: List<Musica>) {
+fun MusicasPantalla(musicas: List<Musica>, onClikMusica: (Musica) -> Unit) {
+
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier.fillMaxSize()
@@ -26,13 +29,15 @@ fun MusicasPantalla(musicas: List<Musica>) {
         Text(
             text = "New Release",
             color = Color.Black,
-            style = MaterialTheme.typography.h1,
+            fontFamily = Poppins,
+            style = MaterialTheme.typography.h2,
             textAlign = TextAlign.Center
         )
         Text(
             text = "ALBUM",
             color = Color.LightGray,
-            style = MaterialTheme.typography.h5,
+            fontFamily = Poppins,
+            style = MaterialTheme.typography.body1,
             textAlign = TextAlign.Center
         )
         Column(
@@ -40,16 +45,21 @@ fun MusicasPantalla(musicas: List<Musica>) {
                 .padding(start = 25.dp, end = 25.dp)
                 .verticalScroll(rememberScrollState())
         ) {
-            musicas.forEach {
+            musicas.forEach { musica ->
                 Row(
-                    modifier = Modifier.fillMaxWidth(),
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .clickable { onClikMusica(musica) },
+
                     horizontalArrangement = Arrangement.SpaceEvenly
                 ) {
-                   // TODO tu imagen que pinta la url
-
-                    AsyncImage(
-                        model = "https://blog.edufors.com/wp-content/uploads/2018/07/deporte-400x400.jpg",
-                        contentDescription = null
+                    val painter = rememberImagePainter(musica.image_url)
+                    Image(
+                        painter = painter,
+                        contentDescription = null,
+                        modifier = Modifier
+                            .size(70.dp)
+                            .clip(RoundedCornerShape(12.dp))
                     )
                     Column(
                         modifier = Modifier
@@ -57,16 +67,18 @@ fun MusicasPantalla(musicas: List<Musica>) {
                             .padding(start = 10.dp)
                     ) {
                         Text(
-                            text = "${it.title}",
-                            style = MaterialTheme.typography.h5
+                            text = "${musica.title}",
+                            fontFamily = Poppins,
+                            style = MaterialTheme.typography.h2
                         )
                         Text(
-                            text = "${it.subtitulo}",
-                            style = MaterialTheme.typography.caption,
+                            text = "${musica.subtitulo}",
+                            fontFamily = Poppins,
+                            style = MaterialTheme.typography.body1,
                             color = Color.LightGray
                         )
                     }
-                    if (it.love) {
+                    if (musica.love) {
                         Image(
                             painter = painterResource(id = R.drawable.love),
                             contentDescription = "love"

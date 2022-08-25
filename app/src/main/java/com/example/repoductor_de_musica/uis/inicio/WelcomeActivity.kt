@@ -16,6 +16,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.repoductor_de_musica.routes.WelcomeScreen
 import com.example.repoductor_de_musica.ui.theme.Repoductor_de_musicaTheme
+import com.example.repoductor_de_musica.uis.inicio.components.MusicaSeleccionadaPantalla
 import com.example.repoductor_de_musica.uis.inicio.components.MusicasPantalla
 import com.example.repoductor_de_musica.uis.inicio.components.WelcomePantalla
 
@@ -46,6 +47,7 @@ fun MainScreem(
     welcomeViewModel: WelcomeViewModel
 ) {
     val musicas by welcomeViewModel.musicas.observeAsState(listOf())
+    val musicaSeleccionada by welcomeViewModel.musicaSeleccionada.observeAsState()
     val navController = rememberNavController()
     NavHost(navController = navController, startDestination = WelcomeScreen.Bienvenida.route) {
         composable(WelcomeScreen.Bienvenida.route) {
@@ -57,7 +59,18 @@ fun MainScreem(
         }
         composable(WelcomeScreen.Musicas.route) {
             welcomeViewModel.getMusicas()
-            MusicasPantalla(musicas = musicas)
+            MusicasPantalla(
+                musicas = musicas,
+                onClikMusica = {
+                    welcomeViewModel.enviarMusicasSeleccionas(it)
+                    navController.navigate(WelcomeScreen.MusicaSeleccionada.route)
+                }
+            )
+        }
+        composable(WelcomeScreen.MusicaSeleccionada.route){
+            MusicaSeleccionadaPantalla(
+                musica = musicaSeleccionada
+            )
         }
     }
 
